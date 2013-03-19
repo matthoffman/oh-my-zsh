@@ -27,7 +27,8 @@ zstyle -s ':prezto:module:git:status:ignore' submodules '_git_status_ignore_subm
 #
 
 # Git
-alias g='git'
+# matt commented this out; i use "g" as an alias for "grep -R"
+#alias g='git'
 
 # Branch (b)
 alias gb='git branch'
