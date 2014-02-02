@@ -97,6 +97,13 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 zstyle ':prezto:module:prompt' theme 'matt'
 
 #
+# Ruby
+#
+
+# Auto switch the Ruby version on directory change.
+# zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+
+#
 # Screen
 #
 
