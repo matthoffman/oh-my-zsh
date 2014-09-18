@@ -47,6 +47,12 @@ path=(
   $HOME/.rbenv/bin
   /usr/local/{bin,sbin}
   /opt/local/{bin,sbin}
+  /usr/{bin,sbin}
+  /{bin,sbin}
+  $HOME/tools/maven/current/bin
+  $HOME/tools/intellij/current/bin
+  $HOME/tools/eclipse/current
+  current/bin
   $path
 )
 
@@ -78,3 +84,5 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 
+# fix bower in zsh
+alias bower='noglob bower'
