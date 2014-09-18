@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='mvim'
 export PAGER='less'
 
 #
@@ -42,7 +42,10 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  $HOME/bin
+  $HOME/.rbenv/bin
   /usr/local/{bin,sbin}
+  /opt/local/{bin,sbin}
   $path
 )
 
@@ -71,4 +74,8 @@ if [[ -d "$TMPDIR" ]]; then
   fi
 fi
 
-PATH=$HOME/.rbenv/bin:$PATH
+
+# source in any local env variables
+if [[ -s "${ZDOTDIR:-$HOME}/.zshenv.local" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshenv.local"
+fi

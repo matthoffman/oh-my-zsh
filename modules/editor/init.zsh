@@ -161,6 +161,13 @@ function zle-keymap-select zle-line-init zle-line-finish {
   # Update editor information.
   zle editor-info
 }
+
+# Enable autosuggestions automatically
+# autosuggestions currently breaks tab-completion, which is really a shame. 
+#zle-line-init() {
+#    zle autosuggest-start
+#}
+
 zle -N zle-keymap-select
 zle -N zle-line-finish
 zle -N zle-line-init
@@ -349,4 +356,3 @@ else
 fi
 
 unset key{map,}
-
