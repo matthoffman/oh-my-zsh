@@ -36,7 +36,8 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'git' \
   'node' \
-  'ruby' \
+  'rsync' \
+  'ssh' \
   'archive' \
   'syntax-highlighting' \
   'history-substring-search' \
@@ -118,7 +119,7 @@ zstyle ':prezto:module:prompt' theme 'matt'
 #
 
 # Set the SSH identities to load into the agent.
-# zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_dsa' 
 
 #
 # Syntax Highlighting
@@ -144,13 +145,7 @@ zstyle ':prezto:module:prompt' theme 'matt'
 #
 
 # Auto set the tab and window titles.
-# zstyle ':prezto:module:terminal' auto-title 'yes'
-
-# Set the window title format.
-# zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
-
-# Set the tab title format.
-# zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+zstyle ':prezto:module:terminal' auto-title 'yes'
 
 # Set the window title format.
 zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
