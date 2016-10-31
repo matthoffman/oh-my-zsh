@@ -33,8 +33,7 @@ fi
 
 # some command-line aliases that apply across machines
 alias cds="cd ~/src; pwd"
-
-
+alias ec="emacsclient -n -c "
 
 # source in any local aliases
 if [[ -s "${ZDOTDIR:-$HOME}/.zshrc.local" ]]; then

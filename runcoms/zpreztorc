@@ -40,6 +40,7 @@ zstyle ':prezto:load' pmodule \
   'archive' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'python' \
   'prompt'
 
 
