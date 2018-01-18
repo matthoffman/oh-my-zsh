@@ -5,22 +5,7 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-#export MAVEN_HOME=$HOME/tools/maven/current
-#export M2_HOME=$HOME/tools/maven/current
-#export GROOVY_HOME=$HOME/tools/groovy
-#export ANT_HOME=$HOME/tools/ant
-#export JAVA_HOME=/usr/lib/jvm/default-java/
-#export GRADLE_HOME=$HOME/tools/gradle
-#export SCALA_HOME=$HOME/tools/scala
-#export PLAY_HOME=$HOME/tools/play
-
 # Ensure that a non-login, non-interactive shell has a defined environment.
-if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
-fi
-
-
-# source in any local env variables
-if [[ -s "${ZDOTDIR:-$HOME}/.zshenv.local" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zshenv.local"
 fi
