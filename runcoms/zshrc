@@ -11,3 +11,31 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Ruby ------
+if [[ -d "$HOME/.rbenv/bin" ]]; then
+  eval "$(rbenv init -)"
+fi
+
+# autosuggestion doesn't yet work with zprezto; that's really a shame.
+# set up autocomplete
+#source ~/.zsh-autosuggestions/autosuggestions.zsh
+
+# Enable autosuggestions automatically
+# this is now in editor/init.sh
+#zle-line-init() {
+#    zle autosuggest-start
+#}
+
+#bindkey '^T' autosuggest-toggle
+#bindkey '^f' vi-forward-blank-word
+#bindkey '^F' vi-forward-word
+
+# some command-line aliases that apply across machines
+alias cds="cd ~/src; pwd"
+alias ec="emacsclient -n -c "
+
+# source in any local aliases
+if [[ -s "${ZDOTDIR:-$HOME}/.zshrc.local" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshrc.local"
+fi
