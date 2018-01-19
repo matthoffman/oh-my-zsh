@@ -29,20 +29,21 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
+  'tmux' \
   'editor' \
   'history' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
-  'dpkg' \
   'fasd' \
   'git' \
   'node' \
-  'ruby' \
+  'rsync' \
   'archive' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'autosuggestions' \
   'python' \
   'prompt'
 
