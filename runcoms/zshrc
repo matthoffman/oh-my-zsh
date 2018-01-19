@@ -33,8 +33,7 @@ fi
 
 # some command-line aliases that apply across machines
 alias cds="cd ~/src; pwd"
-
-
+alias ec="emacsclient -n -c "
 
 # source in any local aliases
 if [[ -s "${ZDOTDIR:-$HOME}/.zshrc.local" ]]; then
@@ -44,3 +43,5 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
