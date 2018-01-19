@@ -22,21 +22,40 @@ Settings
 To enable highlighting for this module only, add the following line to
 *zpreztorc*:
 
-    zstyle ':prezto:module:syntax-highlighting' color 'yes'
+```sh
+zstyle ':prezto:module:syntax-highlighting' color 'yes'
+```
 
 ### Highlighters
 
 Syntax highlighting is accomplished by pluggable [highlighters][2]. This module
-enables the *main*, *brackets*, and *cursor* highlighters by default.
+only enables the *main* highlighter by default.
 
 To enable all highlighters, add the following to *zpreztorc*:
 
-    zstyle ':prezto:module:syntax-highlighting' highlighters \
-      'main' \
-      'brackets' \
-      'pattern' \
-      'cursor' \
-      'root'
+```sh
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+  'main' \
+  'brackets' \
+  'pattern' \
+  'line' \
+  'cursor' \
+  'root'
+```
+
+### Highlighting Styles
+
+Each syntax highlighter defines styles used to highlight tokens.
+
+To highlight, for example, builtins, commands, and functions in blue instead of
+green, add the following to *zpreztorc*:
+
+```sh
+zstyle ':prezto:module:syntax-highlighting' styles \
+  'builtin' 'bg=blue' \
+  'command' 'bg=blue' \
+  'function' 'bg=blue'
+```
 
 ### Highlighting Styles
 
@@ -60,4 +79,3 @@ Authors
 [1]: https://github.com/zsh-users/zsh-syntax-highlighting
 [2]: https://github.com/zsh-users/zsh-syntax-highlighting/tree/master/highlighters
 [3]: https://github.com/sorin-ionescu/prezto/issues
-
