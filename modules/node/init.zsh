@@ -7,6 +7,7 @@
 #
 
 # Load manually installed NVM into the shell session.
+export NVM_DIR="$HOME/.nvm"
 if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
   source "$HOME/.nvm/nvm.sh"
 
