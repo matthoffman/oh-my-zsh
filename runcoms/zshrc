@@ -35,6 +35,12 @@ fi
 alias cds="cd ~/src; pwd"
 alias ec="emacsclient -n -c "
 
+sumcol()  {      awk "{sum+=\$$1} END {print sum}"; }
+
+kv() {
+	  jq -r 'to_entries[] | "\(.key)=\(.value)"'
+}
+
 # source in any local aliases
 if [[ -s "${ZDOTDIR:-$HOME}/.zshrc.local" ]]; then
   source "${ZDOTDIR:-$HOME}/.zshrc.local"
