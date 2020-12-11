@@ -50,9 +50,6 @@ path=(
   /opt/local/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}
-  $HOME/tools/maven/current/bin
-  $HOME/tools/intellij/current/bin
-  $HOME/tools/eclipse/current
   current/bin
   $path
 )
