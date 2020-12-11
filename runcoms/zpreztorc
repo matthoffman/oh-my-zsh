@@ -47,8 +47,8 @@ zstyle ':prezto:load' pmodule \
   'python' \
   'docker' \
   'osx' \
+  'ctpx' \
   'prompt'
-
 
 #
 # Autosuggestions
@@ -147,7 +147,10 @@ zstyle ':prezto:module:prompt' theme 'matt'
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
 # zstyle ':prezto:module:python:virtualenv' initialize 'yes'
 zstyle ':prezto:module:python' skip-virtualenvwrapper-init 'on'
-zstyle ':prezto:module:python' conda-init 'on'
+# not sure what this does exactly, so turning it off for now.
+# I'm using asdf and a mix of miniconda and venv/Pipenv/Poetry currently, and
+# I don't need more magic behind the scenes messing things up
+#zstyle ':prezto:module:python' conda-init 'on'
 
 #
 # Ruby
