@@ -12,11 +12,6 @@ fi
 
 # Customize to your needs...
 
-# Ruby ------
-if [[ -d "$HOME/.rbenv/bin" ]]; then
-  eval "$(rbenv init -)"
-fi
-
 # autosuggestion doesn't yet work with zprezto; that's really a shame.
 # set up autocomplete
 #source ~/.zsh-autosuggestions/autosuggestions.zsh

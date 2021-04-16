@@ -41,7 +41,6 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'fasd' \
   'git' \
-  'node' \
   'rsync' \
   'archive' \
   'syntax-highlighting' \
@@ -53,6 +52,8 @@ zstyle ':prezto:load' pmodule \
   'ctpx' \
   'prompt'
 
+  # seems to be taking a lot of time at startup?
+  #'node' \
 #
 # Autosuggestions
 #
@@ -148,7 +149,9 @@ zstyle ':prezto:module:prompt' theme 'matt'
 # zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
-# zstyle ':prezto:module:python:virtualenv' initialize 'yes'
+#zstyle ':prezto:module:python:virtualenv' initialize 'yes'
+zstyle ':prezto:module:python:virtualenv' initialize 'no'
+zstyle ':prezto:module:python:virtualenv' auto-switch 'no'
 zstyle ':prezto:module:python' skip-virtualenvwrapper-init 'on'
 # not sure what this does exactly, so turning it off for now.
 # I'm using asdf and a mix of miniconda and venv/Pipenv/Poetry currently, and

@@ -10,31 +10,31 @@
 # Load dependencies
 pmodload 'helper'
 
-# Load manually installed pyenv into the path
-if [[ -s "${PYENV_ROOT:=$HOME/.pyenv}/bin/pyenv" ]]; then
-  path=("${PYENV_ROOT}/bin" $path)
-  eval "$(pyenv init - --no-rehash zsh)"
-
-# Load pyenv into the current python session
-elif (( $+commands[pyenv] )); then
-  eval "$(pyenv init - --no-rehash zsh)"
-
-# Prepend PEP 370 per user site packages directory, which defaults to
-# ~/Library/Python on macOS and ~/.local elsewhere, to PATH. The
-# path can be overridden using PYTHONUSERBASE.
-else
-  if [[ -n "$PYTHONUSERBASE" ]]; then
-    path=($PYTHONUSERBASE/bin $path)
-  elif is-darwin; then
-    path=($HOME/Library/Python/*/bin(N) $path)
-  else
-    # This is subject to change.
-    path=($HOME/.local/bin $path)
-  fi
-fi
+## Load manually installed pyenv into the path
+#if [[ -s "${PYENV_ROOT:=$HOME/.pyenv}/bin/pyenv" ]]; then
+#  path=("${PYENV_ROOT}/bin" $path)
+#  eval "$(pyenv init - --no-rehash zsh)"
+#
+## Load pyenv into the current python session
+#elif (( $+commands[pyenv] )); then
+#  eval "$(pyenv init - --no-rehash zsh)"
+#
+## Prepend PEP 370 per user site packages directory, which defaults to
+## ~/Library/Python on macOS and ~/.local elsewhere, to PATH. The
+## path can be overridden using PYTHONUSERBASE.
+#else
+#  if [[ -n "$PYTHONUSERBASE" ]]; then
+#    path=($PYTHONUSERBASE/bin $path)
+#  elif is-darwin; then
+#    path=($HOME/Library/Python/*/bin(N) $path)
+#  else
+#    # This is subject to change.
+#    path=($HOME/.local/bin $path)
+#  fi
+#fi
 
 # Return if requirements are not found.
-if (( ! $+commands[python] && ! $+commands[pyenv] )); then
+if (( ! $+commands[python] )); then
   return 1
 fi
 
