@@ -44,16 +44,13 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/bin
-  $HOME/.rbenv/bin
+  $HOME/.local/bin
   $HOME/go/bin
   /opt/homebrew/{bin,sbin}
   /usr/local/{bin,sbin}
   /opt/local/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}
-  $HOME/tools/maven/current/bin
-  $HOME/tools/intellij/current/bin
-  $HOME/tools/eclipse/current
   current/bin
   $path
 )

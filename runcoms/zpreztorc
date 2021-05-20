@@ -18,6 +18,9 @@ zstyle ':prezto:*:*' color 'yes'
 # Add additional directories to load prezto modules from
 # zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
 
+# Allow module overrides when pmodule-dirs causes module name collisions
+# zstyle ':prezto:load' pmodule-allow-overrides 'yes'
+
 # Set the Zsh modules to load (man zshmodules).
 # zstyle ':prezto:load' zmodule 'attr' 'stat'
 
@@ -38,7 +41,6 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'fasd' \
   'git' \
-  'node' \
   'rsync' \
   'archive' \
   'syntax-highlighting' \
@@ -147,9 +149,14 @@ zstyle ':prezto:module:prompt' theme 'matt'
 # zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
-# zstyle ':prezto:module:python:virtualenv' initialize 'yes'
+#zstyle ':prezto:module:python:virtualenv' initialize 'yes'
+zstyle ':prezto:module:python:virtualenv' initialize 'no'
+zstyle ':prezto:module:python:virtualenv' auto-switch 'no'
 zstyle ':prezto:module:python' skip-virtualenvwrapper-init 'on'
-zstyle ':prezto:module:python' conda-init 'on'
+# not sure what this does exactly, so turning it off for now.
+# I'm using asdf and a mix of miniconda and venv/Pipenv/Poetry currently, and
+# I don't need more magic behind the scenes messing things up
+#zstyle ':prezto:module:python' conda-init 'on'
 
 #
 # Ruby
@@ -174,7 +181,7 @@ zstyle ':prezto:module:python' conda-init 'on'
 
 # Set the SSH identities to load into the agent.
 # zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
-zstyle ':prezto:module:ssh:load' identities 'id_ed25519'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 
 #
 # Syntax Highlighting
