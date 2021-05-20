@@ -12,11 +12,6 @@ fi
 
 # Customize to your needs...
 
-# Ruby ------
-if [[ -d "$HOME/.rbenv/bin" ]]; then
-  eval "$(rbenv init -)"
-fi
-
 # autosuggestion doesn't yet work with zprezto; that's really a shame.
 # set up autocomplete
 #source ~/.zsh-autosuggestions/autosuggestions.zsh
@@ -30,6 +25,8 @@ fi
 #bindkey '^T' autosuggest-toggle
 #bindkey '^f' vi-forward-blank-word
 #bindkey '^F' vi-forward-word
+
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 
 # some command-line aliases that apply across machines
 alias cds="cd ~/src; pwd"
@@ -48,3 +45,5 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -46,6 +46,7 @@ path=(
   $HOME/bin
   $HOME/.rbenv/bin
   $HOME/go/bin
+  /opt/homebrew/{bin,sbin}
   /usr/local/{bin,sbin}
   /opt/local/{bin,sbin}
   /usr/{bin,sbin}

@@ -46,9 +46,11 @@ zstyle ':prezto:load' pmodule \
   'autosuggestions' \
   'python' \
   'docker' \
-  'osx' \
-  'prompt'
+  'osx' 
+#  'prompt'
 
+# I'm not using the "path" module because I'm using this instead
+eval "$(starship init zsh)"
 
 #
 # Autosuggestions
